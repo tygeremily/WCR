@@ -264,6 +264,86 @@
 	  font-size: 30px !important;
 	  color: #5920DF;
 	}
+	
+	.flex-container {
+	    display: flex;
+	    flex-flow: row nowrap;
+	    justify-content: center;
+	    align-items: center; /* Check other options for this when I size pictures */
+	    list-style: none;  /* Removes bullets */
+	  }
+
+	  .flex-container p{
+	    text-align: left;
+	    color: #fff;
+	  }
+
+	  .flex-item img {
+	      max-height: 250px;
+	      height: 250px;
+	      max-width: 450px;
+	      margin-right: 50px;
+	      margin-bottom: 50px;
+	  }
+
+	  .material-icons {
+	      vertical-align: text-bottom;
+	      font-size: 30px !important;
+	      color: #fff;
+	  }
+
+	  #arrow {
+	      vertical-align: text-bottom;
+	      font-size: 25px !important;
+	      color: #d3d3d3; /* Make this font color when i decide */
+	  }
+
+	  p {
+	    font-family: 'PT Serif', serif;
+	    font-size: 25px;
+	    color: #D3D3D3;
+	  }
+
+	  *:before, *:after { content: ''; }
+
+	  hr {
+	    border: 0;
+	      margin: 1.35em auto;
+	      max-width: 100%;
+	      background-position: 50%;
+	      box-sizing: border-box;
+	  }
+
+	  .accessory {
+	      height: 6px;
+	      background-image: radial-gradient(
+		closest-side,
+		hsla(0, 0%, 50%, 1.0),
+		hsla(0, 0%, 50%, 0) 100%);
+	      position: relative;
+	  }
+
+	  .accessory:after {
+	      position: absolute;
+	      top:  50%;
+	      left: 50%;
+	      display:block;
+	      background-color: hsl(0, 0%, 75%);
+	      height: 12px;
+	      width:  12px;
+	      transform: rotate(45deg);
+	      margin-top:  -10px;
+	      margin-left: -10px;
+	      border-radius: 4px 0;
+	      border: 4px solid hsla(0, 0%, 100%, 0.35);
+	      background-clip: padding-box;
+	      box-shadow: -10px 10px 0 hsla(0, 0%, 100%, 0.15), 10px -10px 0 hsla(0, 0%, 100%, 0.15);
+	  }
+
+
+	  .design-layout-poster {
+	    border-radius: 10px;
+	  }
 </style>
 
 <!--------------- NAVBAR --------------->
