@@ -1,0 +1,595 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" type="text/css" href="./index.css" />
+    <title>Wyze Choyce Rides LLC</title>
+</head>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+	@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css');
+
+	/* -------------------- NAVBAR -------------------- */
+  	nav {
+	    background: #5920DF;
+	    font-family: 'PT Serif', serif;
+	    color: #E6E6E6;
+		text-align: left;
+	}
+
+  	nav .navbar-nav :hover {  /*  THIS ISN'T WORKING BUT I NEED SOMETHING*/
+    	color: #fff;
+  	}
+
+  	.material-symbols-outlined {
+	    vertical-align: text-bottom;
+	    font-size: 20px !important;
+	    color: gray;
+  	}
+
+	/* -------------------- GENERAL -------------------- */
+  	body {
+	    background: #737373;
+	    text-align: center;
+	    font-family: 'PT Serif', serif;
+  	}
+
+  	h1 {
+    	font-family: 'PT Serif', serif;
+    	font-size: 80px;
+    	margin-bottom: 30px;
+  	}
+
+  	h3, p {
+  	  	font-family: 'PT Serif', serif;
+  	}
+
+  	a :link { 
+    	text-decoration: none; 
+  	}
+
+  	a {
+    	color: #fff;
+  	}
+
+  	button {
+	    background: #5920DF;
+	    border: none;
+	    outline: none;
+	    padding: 10px 20px;
+	    border-radius: 50px;
+	    color: #ffffff;
+	    margin-bottom: 50px;
+	    box-shadow: 0 3px 20px 0 #0000003b;
+  	}
+
+  	button:hover{
+    	transform: scale(1.2);
+  	}
+
+	/* -------------------- FOOTER -------------------- */
+
+    .site-footer {
+      	background-color:#26272b;
+      	width: fill;
+      	padding:45px 0 20px;
+      	font-size: 13px;
+        color:#737373;
+    }
+
+    .site-footer hr {
+      	border-top-color:#bbb;
+      	opacity:0.5
+    }
+
+    .site-footer hr.small {
+      	margin:20px 0
+    }
+
+    .site-footer h6 {
+      	color:#fff;
+      	font-size:16px;
+      	text-transform:uppercase;
+      	margin-top:5px;
+      	letter-spacing:2px
+    }
+
+    .site-footer a {
+      	color:#737373;
+    }
+
+    .site-footer a:hover {
+      	color:#5920DF;
+      	text-decoration:none;
+    }
+
+    .footer-links {
+      	padding-left:0;
+      	list-style:none
+    }
+
+    .footer-links li {
+      	display:block
+    }
+
+    .footer-links a {
+      	color:#737373
+    }
+
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover {
+      	color:#5920DF;
+      	text-decoration:none;
+    }
+
+    .footer-links.inline li {
+      	display:inline-block
+    }
+
+    .copyright-text {
+      	margin:0
+    }
+
+    .text-justify {
+      	font-size: 16px;
+      	color: #737373;
+    }
+
+    .copyright-text {
+      	font-size: 16px;
+      	color: #737373;
+    }
+
+/* -------------------- HOME -------------------- */
+/* HEADER */
+  	header {
+	    background: url("./img/img011.jpg");
+	    text-align: center;
+	    width: 100%;
+	    height: 600px;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    position: relative;
+	    overflow: hidden;
+	    border-radius: 0 0 85% 85% / 30%;
+  	}
+
+  	header .overlay{
+	    width: 100%;
+	    height: 100%;
+	    padding: 50px;
+	    color: #FFF;
+	    text-shadow: 1px 1px 1px #333;  
+  	}
+
+	/* VEHICLES */
+  	.figure {
+    	position: relative;
+      	width: 250px;
+  	}
+  
+  	.figure img.image-hover {
+      	position: absolute;
+      	top: 0;
+      	right: 0;
+      	left: 0;
+      	bottom: 0;
+      	object-fit: contain;
+      	opacity: 0;
+      	transition: opacity .2s;
+   	}
+  
+  	.figure:hover img.image-hover {
+      	opacity: 80%;
+  	}
+
+  	/* MAP */
+  	.card-map {
+	    background: #302F50;
+	    color: #E6E6E6;
+	    border-radius: 20px;
+	    margin-left: 5%;
+	    margin-right: 5%;
+  	} 
+
+  	.card-map .col-left {
+    	margin-left: 2%
+  	}
+
+
+  	/* CUSTOMER REVIEWS */
+  	.card {
+    	background: #5920DF;
+  	} 
+
+  	.card .col-left {
+    	margin-left: 4%
+  	}
+
+
+  	/* PAYMENTS */
+
+  	.zoom-box img {
+    	transition: transform .02s; /* Animation */
+  	}
+
+  	.zoom-box img:hover { /* OKAY THIS FOR PAYMENTS BUT MAKE THE ONES NOT HOVERED ON FADE??? */
+    	opacity: 20%;
+  	}
+
+    .contact {
+	    background: url("./img/img042.png");
+	    text-align: center;
+	    width: 100%;
+	    height: 550px;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    position: relative;
+	    overflow: hidden;
+	    border-radius: 0 0 85% 85% / 30%;
+  	}
+
+  	.contact h1{
+    	color: #fff;
+  	}
+
+	.container {
+	  margin: auto;
+	}
+
+	.card-contact {
+	  background: #dcdcdc;
+	  margin-left: 2%;
+	  margin-right: 2%;
+	  border-radius: 10px;
+	  color: #302F50;
+	}
+
+	.card-contact a {
+	  text-decoration: none;
+	  color: #302F50;
+	}
+
+	.material-icons {
+	  vertical-align: text-bottom;
+	  font-size: 30px !important;
+	  color: #5920DF;
+	}
+</style>
+
+<!--------------- NAVBAR --------------->
+<nav class="navbar navbar-expand-lg">
+  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+  	</button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    	<div class="navbar-nav">
+      		<a class="nav-item nav-link" href="./index.html">WCR</a>
+      		<hr>
+    	</div>
+    </div>
+    <span class="navbar-text" style="color: gray">
+      	<span class="material-symbols-outlined">pin_drop</span> Based in Fuquay, NC
+    </span>
+</nav>
+
+<!--------------- HEADER --------------->
+<header>
+	<div class="overlay">
+		<h1>Wyze Choyce Rydes LLC</h1>
+		<br>
+
+		<div class="row">
+			<div class="col">
+				<br>
+				<h3 style="font-size: 55px">
+					<span> Experience the </span>
+					<span style="color: #5920DF"><i>luxury </i></span>
+					<span>of a </span>
+					<span style="color: #5920DF"><i>private, chauffered </i></span>
+					<span>service for your next event! </span>
+				</h3>
+			</div>
+
+			<div class="col">
+				<p style="font-size: 20px">We are professional private drivers with limousine and chauffer services. Whether you're traveling for business or on your way to a red carpet event, you can't go wrong with choosing Wyze Choyce Rydes.</p><br>
+				<p style="font-size: 20px">Never pay surge prices! We have the best rates in town and we'll beat our competitor's pricing, guaranteed. Including affordable trips to Charlotte!  </p><br>
+				<p style="font-size: 20px">We pick up and transport you to areas that other companies won't.  With Wyze Choyce Rydes you don't have to worry about your ride cancelling because you're too far away.</p>
+			</div>
+		</div>
+	</div>
+</header>
+
+  <br><br>
+  <h2><sstrong>CONTACT US</strong></h2>
+  <br>
+
+      <!--------------- CONTACT --------------->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card-contact">
+            <br>
+            <h4 style="color: #5920DF"><i class="material-icons">phone</i> Phone</h4>
+            <p style="color: #3D3B3E;font-size: 20px;">  (919)593-1267 </p>
+            <br> 
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card-contact">
+            <br>
+            <h4 style="color: #5920DF"><i class="material-icons">mail</i> Email</h4>
+            <p style="color: #3D3B3E;font-size: 20px;"> wyzechoycerydesllc@gmail.com </p> 
+            <br>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card-contact">
+            <br>
+            <h4 style="color: #5920DF"><i class="material-icons">photo_camera</i> Instagram</h4>
+            <p style="font-size: 20px;""><a href="https://www.instagram.com/wyzechoyce_rydesllc/"> @wyzechoyce_rydesllc</a></p>
+            <br>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+<body>
+	<br><br><br>
+	<!--------------- MAP --------------->
+	<div class="card-map">
+		<div class="row">
+			<div class="col-left">
+				<br><br>
+				<h2 style="color: #E6E6E6">Servicing Eastern and Central North Carolina</h2>
+				<br>
+				<img src="./img/img041.png" style="width: 900px">
+			</div>
+			<div class="col">
+				<br>
+				<p>Raleigh</p>
+				<p>Durham</p>
+				<p>Cary</p>
+				<p>Garner</p>
+				<p>Pittsboro</p>
+				<p>Apex</p>
+				<p>Fayetteville</p>
+				<p>Charlotte</p>
+			</div>
+		</div>
+		<p>Don't see your location listed? Reach out! We're happy to accomodate long-distance travel.</p><br>
+	</div>
+
+	<!--------------- VEHICLES --------------->
+	<br><br></br><br><br>
+
+	<div class="row">
+		<div class="col">
+			<div class="figure">
+				<img class="image-main" src="./img/img022.png" width="250" alt="chrysler">
+				<img class="image-hover" src="./img/img023.png" width="250" alt="chrysler2">
+			</div>
+		</div>
+		
+		<div class="col">
+			<div class="figure">
+				<img class="image-main" src="./img/img024.png" width="250" alt="denali">
+				<img class="image-hover" src="./img/img025.png" width="250" alt="denali2">
+			</div>
+		</div>
+		
+		<div class="col">
+			<div class="figure">
+				<img class="image-main" src="./img/img020.png" width="250" alt="camry">
+				<img class="image-hover" src="./img/img021.png" width="250" alt="camry2">
+			</div>
+		</div>
+		
+		<div class="col">
+			<div class="figure">
+				<img class="image-main" src="./img/img026.png" width="250" alt="expedition">
+				<img class="image-hover" src="./img/img027.png" width="250" alt="expedition2">
+			</div>
+		</div>
+	</div>
+
+	<br><br>
+
+	<button><a href="./vehicles.html">See More</a></button>
+
+	<br><br><br>
+
+	<!--------------- SERVICES --------------->
+	<h2><strong>SERVICES</strong></h2>
+	<br><br>
+	
+	<!-- Airport, Weddings, Sports-->
+	<ul class="flex-container">
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">flight</i>
+				RDU Airport 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img003.jpg">
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">diamond</i> <!-- I don't like it -->
+				Weddings 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img009.jpg"> 
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">sports_football</i>
+				Sports 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img057.jpg"> 
+		</li>
+	</ul>
+
+	<!-- Concerts, Date Nights, Night Out -->
+	<ul class="flex-container">
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">music_note</i>
+				Concerts 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img054.jpg">
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">wine_bar</i>
+				Date Nights 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img018.jpg"> 
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">liquor</i>
+				Night Out 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img056.jpg"> 
+		</li>
+	</ul>
+
+	<!-- Red Carpet, Long Distance Parties -->
+	<ul class="flex-container">
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">auto_awesome</i>
+				Red Carpet 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img039.jpg"> 
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">travel_explore</i>
+				Long Distance 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img052.jpg"> 
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">celebration</i>
+				Parties 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img051.jpg"> 
+		</li>
+	</ul>
+
+	<!-- Prom, Quinceneras, Sweet 16s -->
+	<ul class="flex-container">
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">party_mode</i>
+				Prom 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img053.jpg"> 
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">spa</i>
+				Quinceneras 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img059.jpg"> 
+		</li>
+
+		<li class="flex-item">
+			<p>
+				<i class="material-icons">cake</i>
+				Sweet 16 
+				<i class="material-icons" id="arrow">south_east</i>
+			</p>
+			<img class="design-layout-poster" src="./img/img058.jpg">      
+		</li>
+	</ul>
+	<br><br>
+
+	<!--------------- REVIEWS ---------------> 
+	<h2><strong>CUSTOMER TESTIMONIES</strong></h2>
+	<br>
+	<div class="card">
+		<div class="row">
+			<div class="col">
+				<div class="review-a">	
+					<img src="./img/img028.png" alt="reviewa" width="325">
+				</div>
+			</div>
+			<div class="col">
+				<div class="review-b">	
+					<img src="./img/img029.png" alt="reviewb" width="325">
+				</div>
+			</div>			
+			<div class="col">
+				<div class="review-c">	
+					<img src="./img/img030.png" alt="reviewc" width="325">
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--------------- FOOTER --------------->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <p class="text-justify"> Wyze Choyce Rydes LLC is a luxury car service in central-eastern North Carolina. Ride to your next destination with a trustworthy driver whether it's downtown Raleigh or a job in Pittsboro, we even accomodate affordable transportation to Charlotte. Reach out and request a trip today, your fifth trip is discounted! </p>
+                <p class="copyright-text" style="text-align: left">Copyright &copy; 2022 All Rights Reserved by Wyze Choyce Rydes LLC</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+            	<br>
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="./index.html">About Us</a></li>
+                    <li><a href="./ourfleet.html">Our Fleet</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./contact.html">Reservations</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+            	<br>
+                <h6>Contact Us</h6>
+                <ul class="footer-links">
+                    <li>(919)593-1267</li>
+                    <li>wyzechoycerydesllc@gmail.com</li>
+                    <li><a href="https://www.instagram.com/wyzechoyce_rydesllc/">@wyzechoyce_rydesllc</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
